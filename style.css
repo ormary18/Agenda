@@ -1,0 +1,78 @@
+body{
+ font-family: 'roboto';
+ background-color: bisque;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-size: 62.5%;
+
+}
+
+.container{
+    height: 100%;
+    width: 70vw;
+    margin: 2rem auto;
+
+}
+
+.container h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.3rem;
+
+}
+
+.formulario{
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formulario input{
+    margin: 1rem 0rem;
+
+}
+
+.formulario button{
+    margin: 1rem 0rem;
+    border: 0;
+    outline: 0;
+    height: 3rem;
+    background-color:sandybrown;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+.formulario input:active{
+    border-bottom: 1px solid;
+}
+
+.formulario input:focus{
+    border-bottom: 1px solid;
+}
+
+
+.logo{
+    display: block;
+    margin: 0px auto;
+    width: 100px;
+
+}
+
+.listado-tareas{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tarea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
+}
