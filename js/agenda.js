@@ -1,17 +1,25 @@
+$(document).ready(function(){
 
-const nombre = document.querySelector('.nombre');
-const apellido = document.querySelector('.apellido');
-const direccion = document.querySelector('.direccion');
-const telefono = document.querySelector('.telefono');
-const vinculo = document.querySelector('.vinculo');
+
+$('h2').html('Agenda de Contacto');
+
+
+const nombre = $('.nombre').html('nombre');
+const apellido = $('.apellido').html('apellido');;
+const direccion = $('.direccion').html('direccion');
+const telefono = $('.telefono').html('telefono');
+const vinculo = $('.vinculo').html('vinculo');
+
 
 const btnAgregarTareas = document.querySelector('.btn-agregar-tarea');
 const listadoDeTareas = document.querySelector('.listado-tareas');
 
 const almacenamiento = window.localStorage
 
+
 btnAgregarTareas.onclick = () => {
     let contacto = {
+        id: Math.random(1,50),
         nombre: nombre.value,
         apellido: apellido.value,
         direccion: direccion.value,
@@ -19,6 +27,14 @@ btnAgregarTareas.onclick = () => {
         vinculo: vinculo.value,
 
     }
+
+ $('#form').submit(function (evento) { 
+       evento.preventDefault();
+       let nombre = $('#nombre').val();
+    
+       
+   });
+
     const almacenarContacto = (almacenamiento, contacto) => {
         almacenamiento.setItem(contacto.id, JSON.stringify(contacto))
         window.location.href = '/'
@@ -38,6 +54,7 @@ btnAgregarTareas.onclick = () => {
     }
 
 
-
-
 }
+
+
+});
